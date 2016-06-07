@@ -31,9 +31,19 @@
 		<!-- jedis -->
 		<jedis.version>2.4.2</jedis.version>
 
+		<!-- druid -->
+		<druid.version>1.0.13</druid.version>
+
+		<!-- hibernate-validator -->
+		<hibernate-validator.version>5.0.3.Final</hibernate-validator.version>
+
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
-		
+
+		<!-- Spring Data JPA -->
+		<spring.data.jpa.version>1.0.0.RELEASE</spring.data.jpa.version>
+
+
 		<!-- Dubbo&Zookeeper -->
 		<zookeeper.version>3.4.6</zookeeper.version>
 		<dubbo.version>2.5.3</dubbo.version>
@@ -42,6 +52,12 @@
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
 		<slf4j.version>1.7.5</slf4j.version>
+
+		<!-- mysql -->
+		<mysql.version>5.1.22</mysql.version>
+
+		<!-- commons -->
+		<commons-lang3.version>3.3.2</commons-lang3.version>
 
 		<!-- Test -->
 		<junit.version>4.11</junit.version>
@@ -107,6 +123,23 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.jpa.version}</version>
+		</dependency>
+
+		<!-- druid -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid.version}</version>
+		</dependency>
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
@@ -127,6 +160,13 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- JSR303 BeanValidator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator.version}</version>
 		</dependency>
 
 
@@ -157,6 +197,13 @@
 			<version>${shiro.version}</version>
 		</dependency>
 
+		<!-- mysql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+
 		<!-- aspectj相关jar包 -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -169,14 +216,21 @@
 			<version>${aspectj.version}</version>
 		</dependency>
 
+		<!-- commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
+		</dependency>
+
 		<!-- jedis -->
 		<dependency>
 			<groupId>redis.clients</groupId>
 			<artifactId>jedis</artifactId>
 			<version>${jedis.version}</version>
 		</dependency>
-		
-		
+
+
 		<!-- Dubbo&Zookeeper -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -215,6 +269,7 @@
 			<artifactId>spring-test</artifactId> <version>${spring-framework.version}</version> 
 			<scope>test</scope> </dependency> <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
 			<version>${junit.version}</version> <scope>test</scope> </dependency> -->
+
 	</dependencies>
 
 	<build>

@@ -2,24 +2,32 @@ package com.wujiabo.opensource.provider.impl;
 
 import java.util.Set;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.wujiabo.opensource.entity.TUser;
 import com.wujiabo.opensource.model.User;
 import com.wujiabo.opensource.provider.RbacProvider;
+import com.wujiabo.opensource.service.RbacService;
 
 public class RbacProviderImpl implements RbacProvider {
 
+	@Autowired
+	private RbacService rbacService;
+
 	@Override
 	public User getUserByLoginName(String loginName) {
-		User user = new User();
-		user.setId(1l);
-		user.setUserName("admin");
-		user.setLoginName("admin");
-		user.setPassword("d3c59d25033dbf980d29554025c23a75");
-		user.setSalt("8d78869f470951332959580424d4bf4f");
-		user.setLocked(Boolean.FALSE);
-		if ("admin".equals(loginName)) {
-			return user;
+		TUser tUser = rbacService.getUserByLoginName(loginName);
+		if (tUser == null) {
+			return null;
 		}
-		return null;
+		User user = new User();
+		user.setId(tUser.getUserId());
+		user.setUserName(tUser.getUserName());
+		user.setLoginName(tUser.getLoginName());
+		user.setPassword(tUser.getPassword());
+		user.setSalt(tUser.getSalt());
+		user.setLocked("0".equals(tUser.getLocked()));
+		return user;
 	}
 
 	@Override

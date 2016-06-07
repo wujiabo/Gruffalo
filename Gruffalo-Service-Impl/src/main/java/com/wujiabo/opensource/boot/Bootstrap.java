@@ -8,7 +8,7 @@ public class Bootstrap {
 
 	public static void main(String[] args) throws IOException {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-				new String[] { "spring/application-config.xml","spring/dubbo.xml" });
+				new String[] { "spring/application-config.xml", "spring/dubbo.xml", "spring/jpa.xml" });
 		context.start();
 		System.in.read();
 	}
