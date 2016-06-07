@@ -2,6 +2,7 @@ package com.wujiabo.opensource.web.bind;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.web.filter.PathMatchingFilter;
@@ -16,6 +17,7 @@ public class SysUserFilter extends PathMatchingFilter {
 			throws Exception {
 		ShiroUser shiroUser = (ShiroUser) SecurityUtils.getSubject().getPrincipal();
 		request.setAttribute(Constants.CURRENT_USER, shiroUser);
+		request.setAttribute(Constants.CONTEXT_PATH, ((HttpServletRequest)request).getContextPath());
 		return true;
 	}
 }

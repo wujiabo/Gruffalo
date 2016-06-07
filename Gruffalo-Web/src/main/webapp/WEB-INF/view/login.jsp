@@ -64,7 +64,6 @@
 <link href="static/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="login-body">
-	<div>${error}</div>
 	<div class="container">
 		<form class="form-signin" action="" method="post">
 			<h2 class="form-signin-heading">Please sign in</h2>
@@ -83,7 +82,9 @@
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
 				in</button>
 		</form>
-
+		<c:if test="${!empty error}">
+			<div class="alert alert-danger">${error}</div>
+		</c:if>
 	</div>
 	<!-- /container -->
 

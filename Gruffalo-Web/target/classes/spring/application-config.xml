@@ -119,7 +119,6 @@
 				/login = authc
 				/static/** = anon
 				/logout = logout
-				/authenticated = authc
 				/** = user,sysUser
 			</value>
 		</property>
