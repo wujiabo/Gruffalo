@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="${path}/static/favicon.ico">
-<title>Unauthorized</title>
+<title>User</title>
 <!-- Bootstrap core CSS -->
 <link href="${path}/static/css/bootstrap.min.css" rel="stylesheet">
 <link href="${path}/static/css/justified-nav.css" rel="stylesheet">
@@ -23,23 +23,60 @@
 		<div class="masthead">
 			<ul class="nav nav-justified">
 				<li><a href="${path}/">Gruffalo</a></li>
-				<li><a href="${path}/user/list">User</a></li>
+				<li class="active"><a href="${path}/user/list">User</a></li>
 				<li><a href="${path}/role/list">Role</a></li>
 				<li><a href="${path}/permission/list">Permission</a></li>
 				<li><a href="${path}/logout">Logout</a></li>
 			</ul>
 		</div>
 
-		<!-- Jumbotron -->
-		<div class="jumbotron">
-			<h1>Unauthorized!</h1>
-			<p class="lead">${exception}.</p>
-			<p>
-				<a class="btn btn-lg btn-success" href="${path}/" role="button">Back</a>
-			</p>
+		<!-- Example row of columns -->
+		<div class="row">
+			<div class="col-lg-12">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Username</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Larry</td>
+							<td>the Bird</td>
+							<td>@twitter</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Larry</td>
+							<td>the Bird</td>
+							<td>@twitter</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Larry</td>
+							<td>the Bird</td>
+							<td>@twitter</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
-
-		
 
 		<!-- Site footer -->
 		<div class="footer">

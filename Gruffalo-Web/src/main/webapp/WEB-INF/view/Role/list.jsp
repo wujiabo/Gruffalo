@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="${path}/static/favicon.ico">
-<title>Welcome</title>
+<title>Role</title>
 <!-- Bootstrap core CSS -->
 <link href="${path}/static/css/bootstrap.min.css" rel="stylesheet">
 <link href="${path}/static/css/justified-nav.css" rel="stylesheet">
@@ -22,20 +22,12 @@
 
 		<div class="masthead">
 			<ul class="nav nav-justified">
-				<li class="active"><a href="${path}/">Gruffalo</a></li>
+				<li><a href="${path}/">Gruffalo</a></li>
 				<li><a href="${path}/user/list">User</a></li>
-				<li><a href="${path}/role/list">Role</a></li>
+				<li class="active"><a href="${path}/role/list">Role</a></li>
 				<li><a href="${path}/permission/list">Permission</a></li>
 				<li><a href="${path}/logout">Logout</a></li>
 			</ul>
-		</div>
-
-		<!-- Jumbotron -->
-		<div class="jumbotron">
-			<h1>Marketing stuff!</h1>
-			<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas
-				eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-				condimentum nibh, ut fermentum massa justo sit amet.</p>
 		</div>
 
 		<!-- Example row of columns -->
