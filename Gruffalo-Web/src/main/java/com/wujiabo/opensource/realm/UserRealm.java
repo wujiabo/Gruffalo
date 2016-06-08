@@ -26,10 +26,9 @@ public class UserRealm extends AuthorizingRealm {
 		ShiroUser shiroUser = (ShiroUser) principals.getPrimaryPrincipal();
 		SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
 
-		Set<String> roles = SpringUtils.getBean(RbacProvider.class).getRolesByLoginName(shiroUser.getLoginName());
+		Set<String> roles = SpringUtils.getBean(RbacProvider.class).getRolesByUserId(shiroUser.getId());
 		authorizationInfo.setRoles(roles);
-		Set<String> permissions = SpringUtils.getBean(RbacProvider.class)
-				.getPermissionsByLoginName(shiroUser.getLoginName());
+		Set<String> permissions = SpringUtils.getBean(RbacProvider.class).getPermissionsByUserId(shiroUser.getId());
 		authorizationInfo.setStringPermissions(permissions);
 		return authorizationInfo;
 	}

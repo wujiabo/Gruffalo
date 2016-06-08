@@ -7,7 +7,7 @@ import com.wujiabo.opensource.model.User;
 public interface RbacProvider {
 	User getUserByLoginName(String loginName);
 
-	Set<String> getRolesByLoginName(String loginName);
+	Set<String> getRolesByUserId(Long userId);
 
-	Set<String> getPermissionsByLoginName(String loginName);
+	Set<String> getPermissionsByUserId(Long userId);
 }
