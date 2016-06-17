@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="static/favicon.ico">
-<title>Welcome</title>
+<title>Login</title>
 <style type="text/css">
 .login-body {
 	padding-top: 40px;

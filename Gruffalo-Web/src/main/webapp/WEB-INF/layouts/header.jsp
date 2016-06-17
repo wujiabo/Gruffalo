@@ -21,10 +21,10 @@
 					data-toggle="dropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">System Mgmt <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="${path}/test/404">User</a></li>
-						<li><a href="${path}/test/role">Role</a></li>
-						<li><a href="${path}/test/permission">Permission</a></li>
-						<li><a href="${path}/test/error">Menu</a></li>
+						<li><a href="${path}/user/list">User</a></li>
+						<li><a href="${path}/role/list">Role</a></li>
+						<li><a href="${path}/permission/list">Permission</a></li>
+						<li><a href="${path}/menu/list">Menu</a></li>
 					</ul></li>
 				<li class="dropdown"><a href="#" class="dropdown-toggle"
 					data-toggle="dropdown" role="button" aria-haspopup="true"

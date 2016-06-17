@@ -50,6 +50,15 @@
 		class="com.wujiabo.opensource.web.exception.DefaultExceptionHandler" />
 
 
+	<!-- 将Controller抛出的异常转到特定View, 保持SiteMesh的装饰效果 -->
+	<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+		<property name="exceptionMappings">  
+			<props>  
+				<prop key="java.lang.Throwable">error</prop>
+            </props>  
+		</property>  
+    </bean>
+
 	<aop:config proxy-target-class="true"></aop:config>
 	<bean
 		class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">

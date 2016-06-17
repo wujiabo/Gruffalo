@@ -4,13 +4,13 @@
 
 <html>
 <head>
-<title>Unauthorized</title>
+<title>Error</title>
 </head>
 
 <body>
 
 	<div class="jumbotron">
-		<h1>Unauthorized</h1>
+		<h1>Error</h1>
 		<p>${exception}.</p>
 		<p>
 			<a class="btn btn-lg btn-primary" href="${path}/" role="button">Back

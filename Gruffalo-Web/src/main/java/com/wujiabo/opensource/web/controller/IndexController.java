@@ -22,6 +22,11 @@ public class IndexController {
 		return "index";
 	}
 
+	@RequestMapping("/error")
+	public String error(@CurrentUser ShiroUser loginUser, Model model) {
+		return "error";
+	}
+
 	@RequiresPermissions("account:create")
 	@RequestMapping("/test/permission")
 	public String permission() {
