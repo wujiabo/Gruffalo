@@ -44,6 +44,9 @@
 	<%@ include file="/WEB-INF/layouts/header.jsp"%>
 
 	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">&nbsp;</div>
+		</div>
 		<sitemesh:body />
 		<!-- Main component for a primary marketing message or call to action -->
 	</div>

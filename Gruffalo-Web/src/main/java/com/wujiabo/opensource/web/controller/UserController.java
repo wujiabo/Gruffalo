@@ -12,4 +12,11 @@ public class UserController {
 	public String list() {
 		return "/User/list";
 	}
+	
+
+	@RequiresPermissions("USER:UPDATE")
+	@RequestMapping("/user/edit")
+	public String toEdit() {
+		return "/User/edit";
+	}
 }
