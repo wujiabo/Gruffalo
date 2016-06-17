@@ -29,6 +29,38 @@
 				<li><a href="${path}/logout">Logout</a></li>
 			</ul>
 		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				&nbsp;
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="input-group">
+					<span class="input-group-addon"> User Name </span> <input
+						type="text" class="form-control">
+				</div>
+				<!-- /input-group -->
+			</div>
+			<div class="col-lg-4">
+				<div class="input-group">
+					<span class="input-group-addon"> Login Name </span> <input
+						type="text" class="form-control">
+				</div>
+			</div>
+			<div class="col-lg-4 ">
+				<div class="btn-group pull-right">
+					<button type="button" class="btn btn-default">Retrieve</button>
+					<button type="button" class="btn btn-default">Add</button>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				&nbsp;
+			</div>
+		</div>
 
 		<!-- Example row of columns -->
 		<div class="row">
@@ -37,9 +69,9 @@
 					<thead>
 						<tr>
 							<th>#</th>
-							<th>First Name</th>
-							<th>Last Name</th>
-							<th>Username</th>
+							<th>User Name</th>
+							<th>Login Name</th>
+							<th>Locked</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -75,6 +107,17 @@
 						</tr>
 					</tbody>
 				</table>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="btn-group pull-right">
+					<button type="button" class="btn btn-default">First</button>
+					<button type="button" class="btn btn-default">Previous</button>
+					<button type="button" class="btn btn-default">Next</button>
+					<button type="button" class="btn btn-default">Last</button>
+				</div>
 			</div>
 		</div>
 

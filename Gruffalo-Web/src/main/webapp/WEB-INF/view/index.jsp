@@ -3,84 +3,102 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags"%>
-
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 <meta name="description" content="">
 <meta name="author" content="">
 <link rel="icon" href="${path}/static/favicon.ico">
-<title>Welcome</title>
+
+<title>Gruffalo</title>
+
 <!-- Bootstrap core CSS -->
 <link href="${path}/static/css/bootstrap.min.css" rel="stylesheet">
-<link href="${path}/static/css/justified-nav.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="${path}/static/css/ie10-viewport-bug-workaround.css"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="${path}/static/css/navbar-fixed-top.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="${path}/static/js/ie-emulation-modes-warning.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Gruffalo</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">System Mgmt <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">User</a></li>
+							<li><a href="#">Role</a></li>
+							<li><a href="#">Permission</a></li>
+							<li><a href="#">Menu</a></li>
+						</ul>
+					</li>
+					<li><a href="#">System Mgmt</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false"><shiro:principal property="userName"/><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">About</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="${path}/logout">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+
 	<div class="container">
 
-		<div class="masthead">
-			<ul class="nav nav-justified">
-				<li class="active"><a href="${path}/">Gruffalo</a></li>
-				<li><a href="${path}/user/list">User</a></li>
-				<li><a href="${path}/role/list">Role</a></li>
-				<li><a href="${path}/permission/list">Permission</a></li>
-				<li><a href="${path}/logout">Logout</a></li>
-			</ul>
-		</div>
-
-		<!-- Jumbotron -->
+		<!-- Main component for a primary marketing message or call to action -->
 		<div class="jumbotron">
-			<h1>Marketing stuff!</h1>
-			<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas
-				eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-				condimentum nibh, ut fermentum massa justo sit amet.</p>
-		</div>
-
-		<!-- Example row of columns -->
-		<div class="row">
-			<div class="col-lg-4">
-				<h2>Safari bug warning!</h2>
-				<p class="text-danger">As of v7.0.1, Safari exhibits a bug in
-					which resizing your browser horizontally causes rendering errors in
-					the justified nav that are cleared upon refreshing.</p>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce
-					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-					magna mollis euismod. Donec sed odio dui.</p>
-				<p>
-					<a class="btn btn-primary" href="#" role="button">View details
-						&raquo;</a>
-				</p>
-			</div>
-			<div class="col-lg-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce
-					dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-					ut fermentum massa justo sit amet risus. Etiam porta sem malesuada
-					magna mollis euismod. Donec sed odio dui.</p>
-				<p>
-					<a class="btn btn-primary" href="#" role="button">View details
-						&raquo;</a>
-				</p>
-			</div>
-			<div class="col-lg-4">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-					egestas eget quam. Vestibulum id ligula porta felis euismod semper.
-					Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-					nibh, ut fermentum massa.</p>
-				<p>
-					<a class="btn btn-primary" href="#" role="button">View details
-						&raquo;</a>
-				</p>
-			</div>
-		</div>
-
-		<!-- Site footer -->
-		<div class="footer">
-			<p>&copy; Company 2014</p>
+			<h1>Navbar example</h1>
+			<p>This example is a quick exercise to illustrate how the
+				default, static and fixed to top navbar work. It includes the
+				responsive CSS and HTML, so it also adapts to your viewport and
+				device.</p>
+			<p>To see the difference between static and fixed top navbars,
+				just scroll.</p>
+			<p>
+				<a class="btn btn-lg btn-primary" href="../../components/#navbar"
+					role="button">View navbar docs &raquo;</a>
+			</p>
 		</div>
 
 	</div>
@@ -90,5 +108,9 @@
 	<!-- Bootstrap core JavaScript
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="${path}/static/js/jquery.min.js"></script>
+	<script src="${path}/static/js/bootstrap.min.js"></script>
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="${path}/static/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
