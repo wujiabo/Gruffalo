@@ -34,6 +34,12 @@ public class IndexController {
 		return "index";
 	}
 
+	@RequestMapping("/test/error")
+	public String error() {
+		System.out.println(1/0);
+		return "index";
+	}
+
 	@RequestMapping("/test/session")
 	public String session(HttpServletRequest request) {
 		Subject currentUser = SecurityUtils.getSubject();
