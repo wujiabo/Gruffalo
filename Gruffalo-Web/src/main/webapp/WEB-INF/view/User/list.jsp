@@ -26,7 +26,7 @@
 			<div class="btn-group pull-right">
 				<button type="button" class="btn btn-default">Retrieve</button>
 				<button type="button" class="btn btn-default"
-					onclick="javascript:window.location.href='${path}/user/edit'">Add</button>
+					onclick="javascript:window.location.href='${path}/user/toEdit/0'">Add</button>
 			</div>
 		</div>
 	</div>
@@ -94,8 +94,8 @@
 						<td>the Bird</td>
 						<td>@twitter</td>
 						<td><div class="btn-group btn-group-xs">
-								<button type="button" class="btn btn-default">Edit</button>
-								<button type="button" class="btn btn-default">Delete</button>
+								<button type="button" class="btn btn-default" onclick="editRecord()">Edit</button>
+								<button type="button" class="btn btn-default" onclick="deleteRecord()">Delete</button>
 							</div></td>
 					</tr>
 				</tbody>
@@ -113,5 +113,14 @@
 			</div>
 		</div>
 	</div>
+	
+<script type="text/javascript">
+function editRecord(){
+	window.location.href="${path}/user/toEdit/1";
+}
+function deleteRecord(){
+	window.location.href="${path}/user/delete/1";
+}
+</script>
 </body>
 </html>
